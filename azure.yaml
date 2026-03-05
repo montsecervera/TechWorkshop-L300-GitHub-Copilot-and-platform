@@ -1,0 +1,21 @@
+# Azure Developer CLI (AZD) project configuration
+# https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/azd-schema
+
+name: zava-storefront
+metadata:
+  template: ZavaStorefront@0.0.1
+
+services:
+  web:
+    project: ./src
+    language: dotnet
+    host: appservice
+    docker:
+      path: ./Dockerfile
+      context: .
+      remoteBuild: true
+
+infra:
+  provider: bicep
+  path: infra
+  module: main
