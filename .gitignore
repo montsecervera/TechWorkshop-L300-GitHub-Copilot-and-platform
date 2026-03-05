@@ -136,6 +136,13 @@ coverage-html/
 # Generated files
 appsettings.*.json
 
+# Bicep compiled ARM JSON output (infra/*.json, infra/modules/*.json)
+infra/*.json
+infra/modules/*.json
+
+# AZD environment files
+.azure/
+
 # Misc
 Thumbs.db
 desktop.ini
